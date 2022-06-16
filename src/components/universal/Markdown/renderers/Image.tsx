@@ -98,6 +98,7 @@ const _Image: FC<{ src: string; alt?: string }> = observer(({ src, alt }) => {
     />
   )
 })
+const style = { padding: '1rem 0' }
 export const Image =
   typeof document === 'undefined'
     ? ({ src, alt }) => <img src={src} alt={alt} />
