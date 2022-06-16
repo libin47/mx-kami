@@ -5,6 +5,16 @@ import type { PostModel } from './post'
 import type { SayModel } from './say'
 import type { SeoOptionModel } from './setting'
 import type { UserModel } from './user'
+import type { TextBaseModel } from './base'  
+
+interface PhotoModel extends TextBaseModel {
+  hide: boolean;
+  copyright: boolean;
+  title: string;
+  slug: string;
+  photos: string[];
+  album: {name:string;slug:string};
+}
 
 export interface AggregateRoot {
   user: UserModel
@@ -24,6 +34,7 @@ export interface AggregateTop {
   notes: Pick<NoteModel, 'id' | 'title' | 'created' | 'nid'>[]
   posts: Pick<PostModel, 'id' | 'slug' | 'created' | 'title' | 'category'>[]
   says: SayModel[]
+  photos: Pick<PhotoModel, 'id' | 'slug' | 'title' | 'photos' | 'album'>[];
 }
 
 export enum TimelineType {

@@ -26,20 +26,20 @@ import { FriendsSection } from './SectionNews/friend'
 import { SectionWrap } from './SectionNews/section'
 import styles from './section.module.css'
 
-export interface PhotoModel extends TextBaseModel {
-  hide: boolean;
-  copyright: boolean;
-  title: string;
-  slug: string;
-  photos: string[];
-  album: {name:string;slug:string};
-}
+// export interface PhotoModel extends TextBaseModel {
+//   hide: boolean;
+//   copyright: boolean;
+//   title: string;
+//   slug: string;
+//   photos: string[];
+//   album: {name:string;slug:string};
+// }
 
-export interface AggregateTopMy extends AggregateTop {
-  photos: Pick<PhotoModel, 'id' | 'slug' | 'title' | 'photos' | 'album'>[];
-}
+// export interface AggregateTopMy extends AggregateTop {
+//   photos: Pick<PhotoModel, 'id' | 'slug' | 'title' | 'photos' | 'album'>[];
+// }
 
-const _Sections: FC<AggregateTopMy> = ({ notes, posts, photos }) => {
+const _Sections: FC<AggregateTop> = ({ notes, posts, photos }) => {
   const config = useThemeConfig()
   const randomImages = config.site.figure?.length
     ? shuffle(config.site.figure)

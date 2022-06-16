@@ -1,11 +1,11 @@
-import { TextBaseModel } from './base'
+import type { TextBaseModel } from './base'
 
 export enum EnumPageType {
   'md' = 'md',
   'html' = 'html',
   'frame' = 'frame',
 }
-export interface PageModel extends TextBaseModel {
+export interface PageModel extends TextBaseModel { 
   created: string
 
   slug: string

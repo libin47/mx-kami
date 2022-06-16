@@ -25,15 +25,15 @@ const PageView: PageOnlyProps = observer((props) => {
   const page = pageStore.get(props.id) || (noop as PageModel)
   const { title, subtitle, text } = page
 
-  useEffect(() => {
-    if (page.meta?.style) {
-      const $style = appendStyle(page.meta.style)
+  // useEffect(() => {
+  //   if (page.meta?.style) {
+  //     const $style = appendStyle(page.meta.style)
 
-      return () => {
-        $style && $style.remove()
-      }
-    }
-  }, [page.meta?.style])
+  //     return () => {
+  //       $style && $style.remove()
+  //     }
+  //   }
+  // }, [page.meta?.style])
 
   useHeaderMeta(page.title, page.subtitle || '')
   useHeaderShare(page.title, page.text)
