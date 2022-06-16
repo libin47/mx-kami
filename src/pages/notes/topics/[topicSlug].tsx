@@ -5,8 +5,8 @@ import Linkify from 'react-linkify'
 import { TransitionGroup } from 'react-transition-group'
 import { apiClient } from 'utils'
 
-import type { NoteModel, Pager } from '@mx-space/api-client'
-import type { TopicModel } from '@mx-space/api-client/types/models/topic'
+import type { NoteModel, Pager } from 'api-client'
+import type { TopicModel } from '~/api-client/models/topic'
 
 import { ArticleLayout } from '~/components/layouts/ArticleLayout'
 import { Divider } from '~/components/universal/Divider'

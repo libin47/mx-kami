@@ -1,0 +1,26 @@
+mapSet:
+  peopleIds?: 人物配置
+  enemyIds?: 怪物配置
+  sceneIds?: 场景配置
+cunOut: 
+  enemyIds: 
+    - yiqunShiLaiMu
+    - yiqunMaoTouYing
+cunIn: 
+  enemyIds: 
+    - yiqunShiLaiMu
+cunMid: 
+  peopleIds: 
+    - bank
+    - zuoluo
+  enemyIds: 
+    - bankBiTiChong
+cunWood: 
+  peopleIds: 
+    - girl
+cunOut1: 
+  peopleIds: 
+    - boy
+  enemyIds: 
+    - yiqunShiLaiMu
+world: 

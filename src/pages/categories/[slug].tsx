@@ -6,7 +6,7 @@ import { TransitionGroup } from 'react-transition-group'
 import type {
   CategoryModel,
   CategoryWithChildrenModel,
-} from '@mx-space/api-client'
+} from 'api-client'
 
 import { TimelineListWrapper } from '~/components/universal/TimelineListWrapper'
 import { BottomUpTransitionView } from '~/components/universal/Transition/bottom-up'

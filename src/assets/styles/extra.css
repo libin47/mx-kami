@@ -197,21 +197,23 @@ ph {
   }
 }
 
+
 .is-note #write {
-  font-family: var(--serif-font);
+  /* font-family: var(--serif-font); */
+  font-family: var(--note-font); ;
   color: var(--shizuku-text-color);
   font-size: 16px;
   line-height: 1.75;
   word-wrap: break-word;
   padding-top: 2rem;
 
-  > p:first-child {
-    margin-bottom: 2rem;
-  }
+  /* > p:first-child {
+    margin-left: 2rem;
+  } */
 }
 
 .is-note strong {
-  font-family: var(--sans-font);
+  font-family: var(--note-font-bold);
 }
 
 .is-note .note-head {
@@ -241,11 +243,11 @@ ph {
   display: inline-block;
 }
 
-.is-note #write > .paragraph:first-child::first-letter {
+/* .is-note #write > .paragraph:first-child::first-letter {
   float: left;
   font-size: 2.4em;
   margin: 0 0.2em 0 0;
-}
+} */
 
 .is-note #write > .paragraph {
   clear: both;
@@ -253,14 +255,18 @@ ph {
 
 .is-note #write > ul .indent,
 .is-note #write > .paragraph .indent {
-  border-bottom: 1px solid #00b8bb41;
+  border-bottom: 0.8px solid #50cdcf50;
 }
 
-.is-note #write > .paragraph:not(:nth-child(1)) > span.indent {
+.is-note #write > .paragraph > span.indent {
   &:nth-child(1) {
     margin-left: 2rem;
   }
 }
+
+/* .is-note #write > .paragraph > span.indent {
+  margin-left: 2rem;
+}  */
 
 .is-note .btn:not(:last-child) {
   margin-right: 12px;

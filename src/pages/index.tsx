@@ -4,7 +4,7 @@ import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 import React, { createContext, useContext } from 'react'
 
-import type { AggregateTop } from '@mx-space/api-client'
+import type { AggregateTop } from 'api-client'
 
 import { HomeIntro } from '~/components/in-page/Home/intro'
 import { HomeRandomSay } from '~/components/in-page/Home/random-say'

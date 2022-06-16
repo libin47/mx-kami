@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer'
 import { message } from 'react-message-popup'
 import { useHash } from 'react-use'
 
-import type { CommentModel, Pager } from '@mx-space/api-client'
+import type { CommentModel, Pager } from 'api-client'
 
 import { apiClient } from '~/utils/client'
 

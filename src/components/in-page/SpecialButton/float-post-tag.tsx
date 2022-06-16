@@ -5,7 +5,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { TransitionGroup } from 'react-transition-group'
 import { NoSSR, apiClient } from 'utils'
 
-import type { PostModel, TagModel } from '@mx-space/api-client'
+import type { PostModel, TagModel } from 'api-client'
 
 import { JamTags } from '~/components/universal/Icons'
 import { OverLay } from '~/components/universal/Overlay'

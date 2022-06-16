@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { apiClient } from 'utils'
 
-import type { ProjectModel } from '@mx-space/api-client'
+import type { ProjectModel } from 'api-client'
 
 import { ProjectList } from '~/components/in-page/Project/list'
 import { CodiconGithubInverted } from '~/components/universal/Icons'

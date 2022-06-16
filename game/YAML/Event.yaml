@@ -1,0 +1,15 @@
+Event:
+  value: 值，一般初始都为0
+  remark: 备注，前段无需获取，方便调试、记录
+feedTheGirl:
+  value: 0
+  remark: 把苹果给女孩儿
+attackTheBoy:
+  value: 0
+  remark: 打败男孩
+talkToGirl: 
+  value: 0
+  remark: 和女孩对话
+talkToBoy: 
+  value: 0
+  remark: 和男孩对话

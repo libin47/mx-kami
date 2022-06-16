@@ -1,0 +1,19 @@
+name: 往生者
+hpmax: 200
+mpmax: 200
+tpmax: 200
+hp: 200
+mp: 200
+tp: 100
+speed: 10
+distance: 5
+weaponIds: 
+  - masterBody
+  - wood
+item: 
+  apple: 20
+  sword: 1
+  wood: 10
+skill:
+  - double-cut
+  - sword-storm

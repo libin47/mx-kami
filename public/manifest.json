@@ -1,8 +1,8 @@
 {
-  "name": "静かな森",
-  "short_name": "静かな森",
+  "name": "风の守望者",
+  "short_name": "风の守望者",
   "theme_color": "#39c5bb",
-  "description": "致虚极，守静笃。",
+  "description": "Long May The Sun Shine!",
   "background_color": "#39c5bb",
   "display": "standalone",
   "scope": "/",
@@ -11,11 +11,11 @@
   "prefer_related_applications": true,
   "icons": [
     {
-      "src": "manifest-icon-192.png",
-      "sizes": "192x192"
+      "src": "sun-icon-256.png",
+      "sizes": "256x256"
     },
     {
-      "src": "manifest-icon-512.png",
+      "src": "sun-icon-512.png",
       "sizes": "512x512"
     }
   ]

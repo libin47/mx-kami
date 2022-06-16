@@ -2,12 +2,14 @@
   --shizuku-background-color: #fff;
   --shizuku-text-color: #333;
   --shizuku-theme-color: var(--green);
+  --shizuku-theme-title-color: #000000;
 }
 
 html.dark {
   --shizuku-background-color: #212121;
   --shizuku-text-color: #b4b4b4;
   --shizuku-theme-color: #3c946c;
+  --shizuku-theme-title-color: #f5fff5;
 }
 
 #write {

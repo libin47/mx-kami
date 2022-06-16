@@ -1,4 +1,4 @@
-import type { SayModel } from '@mx-space/api-client'
+import type { SayModel } from 'api-client'
 
 import { Store } from '~/store/helper/base'
 import { apiClient } from '~/utils/client'

@@ -1,8 +1,8 @@
 import type { AxiosError } from 'axios'
 import { message } from 'react-message-popup'
 
-import { allControllers, createClient } from '@mx-space/api-client'
-import { axiosAdaptor } from '@mx-space/api-client/lib/adaptors/axios'
+import { allControllers, createClient } from 'api-client'
+import { axiosAdaptor } from 'api-client/adaptors/axios'
 
 import { API_URL } from '~/constants/env'
 

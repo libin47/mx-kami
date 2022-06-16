@@ -1,0 +1,59 @@
+talk:
+  text: 显示的文本
+  optionIds?: 这里出现的选项们
+    - optionId
+    - giveApple
+  nextTalkId?: 下一条Talk
+  eventGet?: 
+    eventTalk: 当下面所有事件满足时，使用此id的talk替换
+    events:
+      - eventid: 事件id
+        eventtype: 当前值**目标值时触发,例如 Bigger/Smaller/Equal
+        eventvalue: 目标值
+      - eventid: 事件id
+        eventtype: 当前值**目标值时触发
+        eventvalue: 目标值
+  eventSet?:
+    - eventid: 事件id
+      eventvalue: 将事件value设置为
+
+bank: 
+  text: 
+    - 唉，又没酒喝了啊~
+    - 该死的小孩子，又把我吵醒了
+    - 我曾踏足山巅，也曾步入低谷
+    - 他们都让我受益良多 
+  nextTalkId: bank1
+
+zuoluo: 
+  text: 
+    - 背后的伤疤……？
+    - 终有一日，响彻天国
+    - 怎么，你想跟我切磋一下吗
+  nextTalkId: zuoluo
+girl: 
+  text: 
+    - 妈妈出门去了
+    -  我好饿啊
+    -  大哥哥能不能给我找口吃的
+  optionIds:
+    - giveApple
+  nextTalkId: girl
+  eventGet?: 
+    eventTalk: girl1
+    events:
+      - eventid: feedTheGirl
+        eventtype: Equal
+        eventvalue: 1
+boy: 
+  text: 
+    - 煞笔
+  nextTalkId: boy
+bank1: 
+  text: 
+    - 呼噜……
+  nextTalkId: bank1
+girl1: 
+  text: 
+    - 谢谢大哥哥~
+  nextTalkId: girl1

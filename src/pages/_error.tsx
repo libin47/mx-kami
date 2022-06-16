@@ -4,7 +4,7 @@ import type { NextPage } from 'next'
 import { useEffect } from 'react'
 import { message } from 'react-message-popup'
 
-import { RequestError } from '@mx-space/api-client'
+import { RequestError } from 'api-client'
 
 import { ErrorView } from '~/components/universal/Error'
 

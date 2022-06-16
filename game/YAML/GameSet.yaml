@@ -1,0 +1,30 @@
+# 事件对照
+EventValueType:
+  - Smaller
+  - Equal
+  - Bigger
+# 物品类型
+ItemType:
+  - Weapon
+  - Dress
+  - Food
+  - Mater
+  - Rich
+# 伤害类型
+HurtType:
+  - Real
+  - Blunt
+  - Sharp
+  - Magic
+  - Shot
+  - Bomb
+  - Rot
+  - Fire 
+  - Eletric
+  - Ice
+# 武器类型
+WeaponType:
+  - Boby
+  - Sword
+  - Gun
+  - Mana

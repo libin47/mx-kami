@@ -4,7 +4,7 @@ import React, { Fragment, useEffect, useMemo } from 'react'
 import RemoveMarkdown from 'remove-markdown'
 import { appendStyle, noop } from 'utils'
 
-import type { PageModel } from '@mx-space/api-client'
+import type { PageModel } from 'api-client'
 
 import { ArticleLayout } from '~/components/layouts/ArticleLayout'
 import { buildStoreDataLoadableView } from '~/components/universal/LoadableView'

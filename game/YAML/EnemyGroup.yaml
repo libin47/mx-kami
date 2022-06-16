@@ -1,0 +1,44 @@
+enemyGroup:
+  name: 怪物群的名称
+  desc: 怪物群的描述
+  enemys:
+    - enemyid: 怪物id
+      maxnum: 最大数量
+      minnum?: 最小数量
+      prob?: 出现概率
+      enentGet?: 满足事件时必定出现
+    - enemyid: 怪物id
+      maxnum: 最大数量
+      minnum?: 最小数量
+      prob?: 出现概率
+      enentGet?: 满足事件时必定出现
+
+yiqunShiLaiMu:
+  name: 一群史莱姆
+  desc: 这里有一群史莱姆在这里蹦蹦跳跳，场面看起来十分壮观
+  enemys:
+    - enemyid: shiLaiMuBlue
+      maxnum: 3
+      minnum: 2
+    - enemyid: shiLaiMuRed
+      maxnum: 2
+    - enemyid: shiLaiMuKing
+      maxnum: 1
+      minnum: 1
+      prob: 0.05
+
+yiqunMaoTouYing:
+  name: 一群猫头鹰
+  desc: 有一群猫头鹰静静站在树上盯着你
+  enemys:
+    - enemyid: maoTouYing
+      maxnum: 5
+      minnum: 2
+
+bankBiTiChong:
+  name: 半哥的鼻涕虫大军
+  desc: 看上去惨不忍睹
+  enemys:
+    - enemyid: bankBiTiChong
+      maxnum: 5
+      minnum: 3

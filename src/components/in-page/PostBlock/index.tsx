@@ -5,7 +5,7 @@ import type { FC } from 'react'
 import React, { useCallback, useMemo, useState } from 'react'
 import removeMd from 'remove-markdown'
 
-import type { PostModel } from '@mx-space/api-client'
+import type { PostModel } from 'api-client'
 
 import { PhPushPin } from '~/components/universal/Icons'
 import { useInitialData } from '~/hooks/use-initial-data'

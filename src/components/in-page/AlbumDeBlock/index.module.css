@@ -1,0 +1,164 @@
+.main {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.album {
+  height: 10rem;
+  width: 10rem;
+  /* background-color: rgb(255, 172, 47); */
+  font-size: medium;
+
+  & .top { 
+    position: relative;
+    height: 8rem;
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .image0{
+      position: absolute;
+      width: 8rem;
+      height: 7rem;
+      top: 0rem;
+      left: 0rem;
+      transform:rotate(-6deg);
+      z-index: 99;
+    }
+    & .image1{
+      position: absolute;
+      width: 8rem;
+      height: 7rem;
+      top: 0rem;
+      left: 0.5rem;
+      transform:rotate(-3deg);
+      z-index: 88;
+    }
+    & .image2{
+      position: absolute;
+      width: 8rem;
+      height: 7rem;
+      top: 0rem;
+      left: 1rem;
+      transform:rotate(0deg);
+      z-index: 66;
+    }
+    & .image3{
+      position: absolute;
+      width: 8rem;
+      height: 7rem;
+      top: 0rem;
+      left: 1.5rem;
+      transform:rotate(3deg);
+      z-index: 33;
+    }
+    & .image4{
+      position: absolute;
+      width: 8rem;
+      height: 7rem;
+      top: 0rem;
+      left: 2rem;
+      transform:rotate(6deg);
+      z-index: 11;
+    }
+  }
+
+  & .down{
+    position: relative;
+    height: 2rem;
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+.head {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+
+  & .title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    white-space: nowrap;
+    width: calc(100% - 21rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+  }
+
+  &:hover small {
+    opacity: 1;
+  }
+
+  & small {
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.6em;
+  }
+}
+.text {
+  overflow: hidden;
+  line-height: 2;
+
+  .title {
+    text-align: center;
+  }
+}
+
+.btn {
+  padding: 0.7rem 1rem;
+  outline: 0;
+  color: #fff;
+  border-radius: 4rem;
+  background-color: rgb(230 126 34 / 100%);
+  line-height: 1.15;
+  animation: gradual-change infinite 3s ease both;
+  animation-play-state: paused;
+
+  &:hover {
+    animation-play-state: running;
+  }
+}
+
+@keyframes gradual-change {
+  0%,
+  100% {
+    background: rgb(230 126 34 / 100%);
+  }
+
+  50% {
+    background: rgb(241 196 15 / 80%);
+  }
+}
+
+.navigator {
+  display: block;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.post-image-preview {
+  float: right;
+  width: 6em;
+  height: 6em;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.has-image {
+  clear: both;
+  overflow: hidden;
+}

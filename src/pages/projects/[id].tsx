@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 
-import type { ProjectModel } from '@mx-space/api-client'
+import type { ProjectModel } from 'api-client'
 
 import { ProjectDetail } from '~/components/in-page/Project/detail'
 import { useStore } from '~/store'

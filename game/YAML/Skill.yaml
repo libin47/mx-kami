@@ -1,0 +1,56 @@
+skill:
+  name: 技能名称
+  type: 技能类型，法术/战技 MP TP
+  class: 技能效果，攻击/辅助/恢复 ATT/SUP/REC
+  weapon?: 需要的武器类型
+
+  mp?: 释放所需法力值
+  tp?: 释放所需体力值
+  hp?: 释放所需生命值
+
+  distance: 释放距离 0全场 -1仅自己     特指技能范围画出来的范围
+  goal: 作用目标 enemy敌人 player队友 self自己 space任何地方    特指最终选择的目标
+  area: 目标点指示的技能作用作用范围 
+    # 0目标点 -1全场
+    # -46目标行 -28目标及上下 -2468目标上下左右
+    # -1379对角五点 -13远玩家对角 -79近玩家对角 
+    # 1目标点周围1格 2目标点周围2格...
+  skillgoal: 技能生效目标 enemy player all
+
+  effectHp?: hp
+  effectMp?: mp
+  effectTp?: tp
+  effectStep?: step
+
+  buff?:
+    effectSpeed?: speed
+    effectSpeedTime?: speed time
+    effectAtt?: att
+    effectAttTime?: att time
+    effectDef?: def
+    effectDefTime?: def time
+  
+double-cut:
+  name: 二连斩
+  type: TP
+  class: ATT
+  weapon: Sword
+  tp: 1
+  distance: 2
+  goal: enemy
+  area: 0
+  skillgoal: enemy
+  effectHp: 100
+
+sword-storm :
+  name: 剑刃风暴
+  type: MP
+  class: ATT
+  weapon: Sword
+  mp: 20
+  distance: 1
+  goal: self
+  area: 1
+  skillgoal: enemy
+  effectHp: 50
+

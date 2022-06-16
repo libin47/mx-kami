@@ -19,6 +19,8 @@ import {
   MdiFlask,
   MdiTwitter,
   RiNeteaseCloudMusicLine,
+  FaWeibo,
+  FaBiliBili,
 } from '../Icons/menu-icon'
 
 export const iconMap = {
@@ -39,6 +41,8 @@ export const iconMap = {
   faTwitter: MdiTwitter,
   faFlask: MdiFlask,
   faTv: IcBaselineLiveTv,
+  faWeibo: FaWeibo,
+  faBili: FaBiliBili,
 }
 
 let hasAppended = false

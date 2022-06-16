@@ -3,7 +3,7 @@ import type { FC } from 'react'
 import { useCallback, useMemo } from 'react'
 import Linkify from 'react-linkify'
 
-import type { TopicModel } from '@mx-space/api-client/types/models/topic'
+import type { TopicModel } from 'api-client/models/topic'
 
 import { Avatar } from '~/components/universal/Avatar'
 import { Divider } from '~/components/universal/Divider'

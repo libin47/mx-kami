@@ -1,4 +1,4 @@
-import type { ProjectModel } from '@mx-space/api-client'
+import type { ProjectModel } from 'api-client'
 
 import { Store } from '~/store/helper/base'
 import { apiClient } from '~/utils/client'

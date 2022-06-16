@@ -8,7 +8,7 @@ import { useRouter } from 'next/router'
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { message } from 'react-message-popup'
 
-import type { PostModel } from '@mx-space/api-client'
+import type { PostModel } from 'api-client'
 
 import { ArticleLayout } from '~/components/layouts/ArticleLayout'
 import {

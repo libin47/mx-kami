@@ -1,22 +1,17 @@
-import { shuffle } from 'lodash-es'
-import type { NextPage } from 'next'
-import type { FC } from 'react'
-import { createElement, useEffect, useState } from 'react'
-import { NoSSR } from 'utils'
-
-import type { LinkModel } from '@mx-space/api-client'
-import { LinkState, LinkType } from '@mx-space/api-client'
-
+import { LinkModel, LinkState, LinkType } from 'api-client'
 import {
   BannedSection,
   FavoriteSection,
   FriendSection,
   OutdateSection,
-} from '~/components/in-page/Friend/section'
-import { Markdown } from '~/components/universal/Markdown'
-import { useInitialData } from '~/hooks/use-initial-data'
-import { apiClient } from '~/utils/client'
-
+} from 'components/in-page/Friend/section'
+import { Markdown } from 'components/universal/Markdown'
+import { useInitialData } from 'hooks/use-initial-data'
+import { shuffle } from 'lodash-es'
+import { NextPage } from 'next'
+import { createElement, FC } from 'react'
+import { NoSSR } from 'utils'
+import { apiClient } from 'utils/client'
 import { ApplyForLink } from '../../components/in-page/ApplyLink'
 import { ArticleLayout } from '../../components/layouts/ArticleLayout'
 import { SEO } from '../../components/universal/Seo'
@@ -71,16 +66,6 @@ const _Footer: FC = () => {
     seo,
     user: { avatar, name },
   } = useInitialData()
-
-  const [canApply, setCanApply] = useState(false)
-
-  useEffect(() => {
-    apiClient.link.canApplyLink().then(setCanApply)
-  }, [])
-
-  if (!canApply) {
-    return <h1 className="headline">主人禁止了申请友链。</h1>
-  }
   return (
     <>
       <ApplyForLink key={'link'} />
@@ -109,9 +94,9 @@ const _Footer: FC = () => {
           ].join('\n\n') +
           [
             '',
-            `**站点标题**: [${
-              seo.title
-            }](${`${location.protocol}//${location.host}`})`,
+            `**站点标题**: [${seo.title}](${
+              location.protocol + '//' + location.host
+            })`,
             `**站点描述**: ${seo.description}`,
             `**主人头像**: [点击下载](${avatar})`,
             `**主人名字**: ${name}`,

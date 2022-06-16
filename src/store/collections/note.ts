@@ -2,7 +2,7 @@
 import { makeObservable, observable, runInAction } from 'mobx'
 import { message } from 'react-message-popup'
 
-import type { NoteModel } from '@mx-space/api-client'
+import type { NoteModel } from 'api-client'
 
 import { apiClient } from '~/utils/client'
 import { isLikedBefore, setLikeId } from '~/utils/cookie'
@@ -77,7 +77,7 @@ export class NoteStore extends Store<NoteModel> {
 
   async fetchById(
     id: string | number,
-    password?: string,
+    answer?: string,
     options: FetchOption = {},
   ) {
     if (!options.force) {
@@ -90,10 +90,9 @@ export class NoteStore extends Store<NoteModel> {
         }
       }
     }
-    const data = await apiClient.note.getNoteById(
-      id as number,
-      password as string,
-    )
+    const data = await apiClient.note.getNoteById(id, answer)
+    // console.log(data)
+
 
     runInAction(() => {
       this.add(data.data)

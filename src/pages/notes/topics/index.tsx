@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { TransitionGroup } from 'react-transition-group'
 
-import type { TopicModel } from '@mx-space/api-client/types/models/topic'
+import type { TopicModel } from '~/api-client/models/topic'
 
 import { ArticleLayout } from '~/components/layouts/ArticleLayout'
 import { SEO } from '~/components/universal/Seo'

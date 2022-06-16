@@ -8,7 +8,7 @@
  */
 import { makeAutoObservable } from 'mobx'
 
-import type { UserModel } from '@mx-space/api-client'
+import type { UserModel } from 'api-client'
 
 import { apiClient } from '~/utils/client'
 

@@ -19,7 +19,7 @@
 
   & {
     color: #fff;
-    color: var(--light-font);
+    color: var(--shizuku-theme-title-color);
     position: relative;
     padding: 10vw 0 2em;
   }

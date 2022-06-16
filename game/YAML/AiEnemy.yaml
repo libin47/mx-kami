@@ -1,0 +1,49 @@
+# canRun? hp<runHp? runProb? [RUN]
+# canRecover? recoverTimeDid<recoverTime? recoverOther? sb.hp<recoverHp? [RECOVER]
+# canSupport? supportTimeDid<supportTime? supportProb? [SUPPORT]
+# canHurt? in [Distance]? [HURT]: [MOVE]
+# 
+# [RECOVER]=> canSkill? canItem? 获取所有可执行的恢复方法 随机选一个执行
+# [SUPPORT]=> canSkill? canItem? 获取所有可执行的辅助方法 随机选一个执行
+# canAttack? canSkill? canItem? 选取所有可执行的伤害行动，记录为[Action]
+# [Distance] => 由[Action]计算
+# [HURT] => 在[Action]选择可以执行的一个
+# [MOVE] => 选择最近的目标，朝其方向进行移动
+# 
+
+AI:
+  canRun: true/false        # 是否会逃跑
+  runHp?: 30%               # 生命值低于多少时才会尝试逃跑
+  runProb?: 30%             # 使用逃跑的概率、成功率由速度计算
+
+  canRecover: true/false    # 是否会使用恢复手段
+  recoverTime?: 3           # 使用恢复手段的最大次数
+  recoverOther?: true/false # 是否会给队友恢复
+  recoverHp?: 50%           # 当低于多少生命值时触发恢复
+  recoverProb?: 60%         # 使用概率
+
+  canSupport: true/false    # 是否会使用辅助手段
+  supportTime?: 3           # 使用辅助手段的次数限制
+  supportProb?: 50%         # 使用辅助手段的概率
+
+  canHurt: true/false       # 是否会使用进攻性操作
+  canAttack: true/false     # 是否会攻击
+  canSkill: true/false      # 是否会释放技能
+  canItem: true/false       # 是否会使用物品
+
+base:
+  canRun: false
+  runHp: 30%
+  runProb: 30%
+  canRecover: false 
+  recoverTime: 1 
+  recoverOther: true
+  recoverHp: 30% 
+  recoverProb: 60%
+  canSupport: true
+  supportTime: 2 
+  supportProb: 30% 
+  canHurt: true
+  canAttack: true
+  canSkill: true
+  canItem: false

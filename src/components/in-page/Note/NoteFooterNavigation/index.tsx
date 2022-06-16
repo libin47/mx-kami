@@ -3,7 +3,7 @@ import { observer } from 'mobx-react-lite'
 import { useRouter } from 'next/router'
 import type { FC } from 'react'
 
-import type { NoteModel } from '@mx-space/api-client'
+import type { NoteModel } from 'api-client'
 
 import { TrackerAction } from '~/constants/tracker'
 import { useAnalyze } from '~/hooks/use-analyze'

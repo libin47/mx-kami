@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import React, { Fragment, useEffect, useState } from 'react'
 import { TransitionGroup } from 'react-transition-group'
 
-import type { Pager, PaginateResult, PostModel } from '@mx-space/api-client'
+import type { Pager, PaginateResult, PostModel } from 'api-client'
 
 import { PostBlock } from '~/components/in-page/PostBlock'
 import { TagFAB } from '~/components/in-page/SpecialButton/float-post-tag'

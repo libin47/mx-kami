@@ -11,7 +11,7 @@ import { useRouter } from 'next/router'
 import type { FC } from 'react'
 import React, { memo, useEffect, useMemo } from 'react'
 
-import type { AggregateRoot } from '@mx-space/api-client'
+import type { AggregateRoot } from 'api-client'
 
 import Package from '~/../package.json'
 // prettier-ignore-end
@@ -99,6 +99,9 @@ const App: FC<DataModel & { Component: any; pageProps: any; err: any }> = (
   props,
 ) => {
   const { initData, Component, pageProps } = props
+  if (!initData){
+    return null
+  }
 
   const Inner = useMemo(() => {
     // 兜底页

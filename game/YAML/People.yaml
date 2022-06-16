@@ -1,0 +1,35 @@
+people:
+  name: string
+  desc: string
+  talkId?: 对话清单，有这个就可以交谈
+  enemyId?: 敌人id，有这个就可以攻击
+  buyId?: 交易id，偶这个就可以交易
+  optionIds?: 额外选项的id
+  eventGet?: 
+    eventPeople: 当下面所有事件满足时，使用此id的map替换
+    events:
+      - eventid: 事件id
+        eventtype: 当前值**目标值时触发,例如 Bigger/Smaller/Equal
+        eventvalue: 目标值
+      - eventid: 事件id
+        eventtype: 当前值**目标值时触发
+        eventvalue: 目标值
+bank: 
+  name: BANK
+  desc: 名为Bank的勇者，或者说曾是一名勇者，现在在村子里昏昏度日
+  talkId: bank
+  enemyId: bank
+zuoluo: 
+  name: 索隆
+  desc: 一名绿发剑士，相传曾用三刀流斩杀飞龙
+  talkId: zuoluo
+  enemyId: zuoluo
+girl: 
+  name: 小女孩
+  desc: 人畜无害的小女孩，十分可爱
+  talkId: girl
+boy: 
+  name: 小男孩
+  desc: 人畜无害的小男孩
+  talkId: boy
+  enemyId: boy

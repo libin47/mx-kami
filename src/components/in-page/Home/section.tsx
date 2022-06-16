@@ -1,3 +1,5 @@
+
+
 import { shuffle } from 'lodash-es'
 import Router from 'next/router'
 import { useIndexViewContext } from 'pages'
@@ -7,7 +9,7 @@ import { message } from 'react-message-popup'
 import { TransitionGroup } from 'react-transition-group'
 import { NoSSR, apiClient, getRandomImage, stopEventDefault } from 'utils'
 
-import type { AggregateTop } from '@mx-space/api-client'
+import type { AggregateTop, TextBaseModel } from 'api-client'
 
 import {
   FaSolidKissWinkHeart,
@@ -24,7 +26,20 @@ import { FriendsSection } from './SectionNews/friend'
 import { SectionWrap } from './SectionNews/section'
 import styles from './section.module.css'
 
-const _Sections: FC<AggregateTop> = ({ notes, posts }) => {
+export interface PhotoModel extends TextBaseModel {
+  hide: boolean;
+  copyright: boolean;
+  title: string;
+  slug: string;
+  photos: string[];
+  album: {name:string;slug:string};
+}
+
+export interface AggregateTopMy extends AggregateTop {
+  photos: Pick<PhotoModel, 'id' | 'slug' | 'title' | 'photos' | 'album'>[];
+}
+
+const _Sections: FC<AggregateTopMy> = ({ notes, posts, photos }) => {
   const config = useThemeConfig()
   const randomImages = config.site.figure?.length
     ? shuffle(config.site.figure)
@@ -36,7 +51,7 @@ const _Sections: FC<AggregateTop> = ({ notes, posts }) => {
     randomImages[currentImageIndex.current++ % randomImages.length]
   const sections = useRef({
     postSection: {
-      title: '近期技术输出',
+      title: '最新博文',
       icon: <IcTwotoneSignpost />,
       moreUrl: 'posts',
       content: posts.slice(0, 4).map((p) => {
@@ -48,8 +63,9 @@ const _Sections: FC<AggregateTop> = ({ notes, posts }) => {
         }
       }),
     } as SectionNewsProps,
+
     noteSection: {
-      title: '用文字记录生活',
+      title: '随便写写',
       icon: <MdiDrawPen />,
       moreUrl: 'notes',
       content: notes.slice(0, 4).map((n) => {
@@ -58,6 +74,20 @@ const _Sections: FC<AggregateTop> = ({ notes, posts }) => {
           background: getRandomUnRepeatImage(),
           id: n.id,
           ...buildRoute('Note', n),
+        }
+      }),
+    } as SectionNewsProps,
+
+    photoSection: {
+      title: '最新相册',
+      icon: <MdiDrawPen />,
+      moreUrl: 'photos',
+      content: photos.slice(0, 4).map((n) => {
+        return {
+          title: n.title,
+          background: 'https://image.wind-watcher.cn/'+n.photos.pop(),
+          id: n.id,
+          ...buildRoute('Photo', n),
         }
       }),
     } as SectionNewsProps,
@@ -79,6 +109,7 @@ const _Sections: FC<AggregateTop> = ({ notes, posts }) => {
   const SectionCompList = [
     <SectionNews {...sections.current.postSection} key="1" />,
     <SectionNews {...sections.current.noteSection} key="2" />,
+    <SectionNews {...sections.current.photoSection} key="3" />,
     <SectionWrap
       title="朋友们"
       moreUrl="friends"
@@ -168,6 +199,13 @@ function buildRoute<T extends { id: string } & { nid?: number }>(
         href: `/posts/[category]/[slug]`,
       }
     }
+    case 'Photo': {
+      const { slug, album } = obj as any
+      return {
+        as: `/photos/${album.slug}/${slug}`,
+        href: `/photos/[album]/[slug]`,
+      }
+    }
     case 'Note': {
       const { nid } = obj
       return {
@@ -189,5 +227,6 @@ enum ContentType {
   Note,
   Post,
   Say,
+  Photo,
   // Project,
 }

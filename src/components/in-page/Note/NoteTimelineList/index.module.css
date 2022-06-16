@@ -34,6 +34,7 @@
 .item {
   @apply opacity-80 text-left text-gray-1;
 
+  color: var(--title-brown);
   width: 10rem;
   transition: opacity 0.5s, margin 0.5s, color 0.5s;
   font-variant-numeric: tabular-nums;

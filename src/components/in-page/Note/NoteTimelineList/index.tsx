@@ -9,7 +9,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { TransitionGroup } from 'react-transition-group'
 import { usePrevious } from 'react-use'
 
-import type { NoteModel } from '@mx-space/api-client'
+import type { NoteModel } from 'api-client'
 
 import { Divider } from '~/components/universal/Divider'
 import { FloatPopover } from '~/components/universal/FloatPopover'

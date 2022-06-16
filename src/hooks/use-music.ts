@@ -1,6 +1,6 @@
 import { useEffect, useMemo } from 'react'
 
-import type { NoteMusicRecord } from '@mx-space/api-client'
+import type { NoteMusicRecord } from 'api-client'
 
 import { useStore } from '~/store'
 

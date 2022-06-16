@@ -1,0 +1,141 @@
+Map:
+  name: 显示的区块的名称
+  desc?: 描述
+  inId: 所在区域id
+  top?: 上一格区块id
+  down?: 下一格区块id
+  left?: 左一格区块id
+  right?: 右一格区块id
+  mapSetId?: 地图配置ID
+  eventGet?: 
+    eventMap: 当下面所有事件满足时，使用此id的map替换
+    events:
+      - eventid: 事件id
+        eventtype: 当前值**目标值时触发,例如 Bigger/Smaller/Equal
+        eventvalue: 目标值
+      - eventid: 事件id
+        eventtype: 当前值**目标值时触发
+        eventvalue: 目标值
+  eventSet?:
+    - eventid: 事件id
+      eventvalue: 将事件value设置为
+
+firstHouse: 
+  name: 村子西头的小木屋
+  desc: 不知道为啥坐落于马路正中间的小木屋，里面似乎有人居住着
+  inId: westSea
+  mapSetId: cunWood
+  eventGet: 
+    eventMap: firstHouse1
+    events: 
+      - eventid: feedTheGirl
+        eventtype: Equal
+        eventvalue: 1
+  
+firstHouse1: 
+  name: 村子西头的小木屋
+  desc: 不知道为啥坐落于马路正中间的小木屋，里面似乎有人居住着
+  inId: westSea
+  right: fengCheCunW2
+  mapSetId: cunWood
+
+fengCheCunW1: 
+  name: 村子西大道-1
+  desc: 村子西门进来的大路，还是水泥铺的
+  inId: westSea
+  left: fengCheCunW2
+  right: fengCheCunMid
+  mapSetId: cunIn
+
+fengCheCunW2: 
+  name: 村子西大道-2
+  desc: 村子西门进来的大路，还是水泥铺的
+  inId: westSea
+  left: firstHouse
+  right: fengCheCunW1
+  mapSetId: cunOut
+
+fengCheCunMid: 
+  name: 村子集市
+  desc: 一般村子中间都是最红火的地方就是了
+  inId: westSea
+  top: fengCheCunN1
+  down: fengCheCunS1
+  left: fengCheCunW1
+  right: fengCheCunE1
+  mapSetId: cunMid
+
+fengCheCunE1: 
+  name: 村子东大道-1
+  desc: 村子东门进来的大路，还是水泥铺的
+  inId: westSea
+  left: fengCheCunMid
+  right: fengCheCunE2
+  mapSetId: cunIn
+
+fengCheCunE2: 
+  name: 村子东大道-2
+  desc: 村子东门进来的大路，还是水泥铺的
+  inId: westSea
+  left: fengCheCunE1
+  mapSetId: cunOut
+
+fengCheCunN1: 
+  name: 村子北大道-1
+  desc: 村子北门进来的大路，还是水泥铺的
+  inId: westSea
+  top: fengCheCunN2
+  down: fengCheCunMid
+  mapSetId: cunIn
+
+fengCheCunN2: 
+  name: 村子北大道-2
+  desc: 村子北门进来的大路，还是水泥铺的
+  inId: westSea
+  top: fengCheCunN
+  down: fengCheCunN1
+  mapSetId: cunOut
+
+fengCheCunS1: 
+  name: 村子南大道-1
+  desc: 村子南门进来的大路，还是水泥铺的
+  inId: westSea
+  top: fengCheCunMid
+  down: fengCheCunS2
+  mapSetId: cunIn
+
+fengCheCunS2: 
+  name: 村子南大道-2
+  desc: 村子南门进来的大路，还是水泥铺的
+  inId: westSea
+  top: fengCheCunS1
+  mapSetId: cunOut
+
+fengCheCunN: 
+  name: 村子北门
+  desc: 村子的北门，装修的十分豪华
+  inId: westSea
+  down: fengCheCunN2
+  mapSetId: cunOut1
+  eventGet: 
+    eventMap: fengCheCunND
+    events: 
+      - eventid: attackTheBoy
+        eventtype: Equal
+        eventvalue: 1
+
+fengCheCunND: 
+  name: 村子北门
+  desc: 村子的北门，装修的十分豪华
+  inId: westSea
+  top: theWord
+  down: fengCheCunN2
+  mapSetId: cunOut1
+
+theWord: 
+  name: 世界
+  inId: westSea
+  down: fengCheCunN
+  mapSetId: world
+
+

@@ -1,4 +1,3 @@
-import type { AxiosError } from 'axios'
 import dayjs from 'dayjs'
 import { isEqual, omit } from 'lodash-es'
 import { toJS } from 'mobx'
@@ -10,9 +9,10 @@ import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { message } from 'react-message-popup'
 import { useUpdate } from 'react-use'
 
-import type { NoteModel } from '@mx-space/api-client'
-import { RequestError } from '@mx-space/api-client'
-
+import type { NoteModel } from 'api-client'
+import { RequestError } from 'api-client'
+import { springScrollToTop } from 'utils/spring'
+import { apiClient } from 'utils/client'
 import { NoteFooterActionBar } from '~/components/in-page/Note/NoteActionBar'
 import { NoteFooterNavigation } from '~/components/in-page/Note/NoteFooterNavigation'
 import { NotePasswordConfrim } from '~/components/in-page/Note/NotePasswordConfirm'
@@ -36,6 +36,9 @@ import { parseDate } from '~/utils/time'
 import { Seo } from '../../components/universal/Seo'
 import { ImageSizeMetaContext } from '../../context/image-size'
 import { getSummaryFromMd, isDev, noop } from '../../utils'
+
+import { Input, Button } from 'antd'
+import 'antd/dist/antd.css'
 
 const renderLines: FC<{ value: string }> = ({ value }) => {
   return <span className="indent">{value}</span>
@@ -67,6 +70,14 @@ const useUpdateNote = (id: string) => {
         message.error(hideMessage)
         return
       }
+      if (note.statcode==-2){
+        message.error("口令错误")
+        return
+      }
+      if ((before.statcode==-1 || before.statcode==-2) && note.statcode==0){
+        message.success("口令正确")
+        return
+      }
       message.info('生活记录已更新')
 
       event({
@@ -93,11 +104,12 @@ const useUpdateNote = (id: string) => {
     note?.hide,
     note?.isDeleted,
     note?.topicId,
+    note?.statcode,
   ])
 }
 
 const Markdownrenderers = { text: renderLines }
-const NoteView: React.FC<{ id: string }> = observer((props) => {
+const NoteView: React.FC<{ id: string, answer?: string }> = observer((props) => {
   const { userStore, noteStore } = useStore()
   const note = noteStore.get(props.id) || (noop as NoteModel)
 
@@ -115,7 +127,7 @@ const NoteView: React.FC<{ id: string }> = observer((props) => {
   useEffect(() => {
     // FIXME: SSR 之后的 hydrate 没有同步数据
     if (!noteStore.relationMap.has(props.id)) {
-      noteStore.fetchById(note.nid, undefined, { force: true })
+      noteStore.fetchById(note.nid, props.answer, { force: true })
     }
   }, [note.nid])
 
@@ -136,6 +148,15 @@ const NoteView: React.FC<{ id: string }> = observer((props) => {
     count: true,
     length: 150,
   })
+
+  const [question, setQuestion] = useState<string>()
+  const fetchQuestion = async (id) => {
+    const payload = await apiClient.qa.getQuestionByID(id)
+    if(payload){
+      setQuestion(payload.question)
+    }
+  }
+
   useEffect(() => {
     try {
       setTips(
@@ -147,6 +168,9 @@ const NoteView: React.FC<{ id: string }> = observer((props) => {
           note.count.like
         }`,
       )
+      if(note.qa){
+        fetchQuestion(note.qa)
+      }
       // eslint-disable-next-line no-empty
     } catch {}
   }, [
@@ -182,6 +206,9 @@ const NoteView: React.FC<{ id: string }> = observer((props) => {
     }
   }, [isSecret, secretDate])
 
+
+  const [myAnswer, setAnswer] = useState('')
+
   return (
     <>
       <Seo
@@ -207,6 +234,30 @@ const NoteView: React.FC<{ id: string }> = observer((props) => {
             这篇文章暂时没有公开呢，将会在 {dateFormat} 解锁，再等等哦
           </p>
         ) : (
+        <>
+          <p className="text-center my-8 text-light-brown dark:text-shizuku-text" hidden={note.statcode==0}>
+            <p hidden={note.statcode!=-1}>这篇文章设置了访问口令，你需要正确回答以下问题方可阅读。</p>
+            <p hidden={note.statcode!=-2}>口令错误，你需要正确回答以下问题方可阅读。</p>
+            <p className="text-left font-black">【Q】{question}</p>
+            <Input
+              placeholder={'Answer'}
+              value={myAnswer}
+              type="text"
+              onChange={(e) => setAnswer(e.target.value)}
+            />
+            <button
+              className="btn blue"
+              type="submit"
+              onClick={() => {
+                springScrollToTop()
+                router.push('/notes/' + note.nid + '?answer=' + myAnswer)
+              }}
+            >
+              提交
+            </button>
+          </p>
+
+
           <ImageSizeMetaContext.Provider
             value={useMemo(
               () => imagesRecord2Map(note.images || []),
@@ -231,6 +282,7 @@ const NoteView: React.FC<{ id: string }> = observer((props) => {
               </article>
             </BanCopy>
           </ImageSizeMetaContext.Provider>
+        </>
         )}
         <div className="pb-4" />
         {note.topic && <NoteTopic noteId={props.id} topic={note.topic} />}
@@ -256,7 +308,7 @@ const NoteView: React.FC<{ id: string }> = observer((props) => {
   )
 })
 
-const PP: NextPage<NoteModel | { needPassword: true; id: string }> = observer(
+const PP: NextPage<NoteModel | { id: string; answer: ""}> = observer(
   (props) => {
     const router = useRouter()
     const { noteStore } = useStore()
@@ -269,12 +321,12 @@ const PP: NextPage<NoteModel | { needPassword: true; id: string }> = observer(
       }
     }, [note])
 
-    if ('needPassword' in props) {
-      if (!note) {
-        const fetchData = (password: string) => {
+    if ('answer' in props) {
+      if (note?.code==-1) {
+        const fetchData = (answer: string) => {
           const id = router.query.id as string
           noteStore
-            .fetchById(isNaN(+id) ? id : +id, password)
+            .fetchById(isNaN(+id) ? id : +id, answer)
             .catch((err) => {
               message.error('密码错误')
             })
@@ -284,7 +336,7 @@ const PP: NextPage<NoteModel | { needPassword: true; id: string }> = observer(
         }
         return <NotePasswordConfrim onSubmit={fetchData} />
       } else {
-        return <NoteView id={note.id} />
+        return <NoteView id={props.id} answer={props?.answer}/>
       }
     }
 
@@ -300,23 +352,24 @@ const PP: NextPage<NoteModel | { needPassword: true; id: string }> = observer(
 
 PP.getInitialProps = async (ctx) => {
   const id = ctx.query.id as string
-  const password = ctx.query.password as string
+  const answer = ctx.query.answer as string
   if (id == 'latest') {
     return await store.noteStore.fetchLatest()
   }
   try {
     const res = await store.noteStore.fetchById(
       isNaN(+id) ? id : +id,
-      password ? String(password) : undefined,
+      answer ? String(answer) : undefined,
       { force: true },
     )
+    res.answer = answer
     return res as any
   } catch (err: any) {
     if (err instanceof RequestError) {
-      if ((err.raw as AxiosError).response?.status !== 403) {
+      if (err.status !== 403) {
         throw err
       }
-      return { needPassword: true, id: +id }
+      return { answer: answer, id: +id }
     } else {
       throw err
     }

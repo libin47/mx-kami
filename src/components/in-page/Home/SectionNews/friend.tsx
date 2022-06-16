@@ -1,8 +1,8 @@
 import type { FC } from 'react'
 import { memo, useEffect, useState } from 'react'
 
-import type { LinkModel } from '@mx-space/api-client'
-import { LinkState, LinkType } from '@mx-space/api-client'
+import type { LinkModel } from 'api-client'
+import { LinkState, LinkType } from 'api-client'
 
 import { apiClient } from '~/utils/client'
 

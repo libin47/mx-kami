@@ -1,0 +1,63 @@
+Item:
+  name: 名称
+  desc: 描述
+  type: 物品类型 ItemType
+  freplyHp?: number, 
+  wattack?: 攻击力
+  wdistance?: 攻击距离
+  wweaponType?: 武器类型 WeaponType
+  wattackHurt?: 普通攻击伤害类型
+  wattackDesc?: 攻击动画描述
+  picInfo?:  图片
+apple: 
+  name: 苹果
+  desc: 又红又圆的苹果，看着就很有食欲
+  type: Food
+  freplyHp: 50.0
+sword: 
+  name: 剑
+  desc: 经典兵器，看着十分锋利
+  type: Weapon
+  wattack: 33.0
+  wdistance: 3.0
+  wweaponType: Sword
+  wattackHurt: sharp
+  wattackDesc: 挥舞了剑
+wood: 
+  name: 木棍
+  desc: 不知道哪颗树上拆下来的木棍，虽然不顺手当也是一把武器
+  type: Weapon
+  wattack: 10.0
+  wdistance: 3.0
+  wweaponType: Sword
+  wattackHurt: blunt
+  wattackDesc: 用木棍捅向敌人
+guiQie: 
+  name: 二代鬼彻
+  desc: 刀上缠绕着不详的紫气，看到就觉得不寒而栗
+  type: Weapon
+  wattack: 666.0
+  wdistance: 20.0
+  wweaponType: Sword
+  wattackHurt: sharp
+  wattackDesc: 轻轻挥刀
+masterBody: 
+  name: 无武器
+  type: Weapon
+  wattack: 5.0
+  wdistance: 1.0
+  wweaponType: Body
+  wattackHurt: blunt
+  wattackDesc: 攻击
+maoTouYingZhua:
+  name: 猫头鹰的爪子
+  type: Weapon
+  wattack: 5.0
+  wdistance: 2.0
+  wweaponType: Body
+  wattackHurt: blunt
+  wattackDesc: 攻击
+xp: 
+  name: 经验
+  desc: 使用经验在基地进行升级
+  type: Rich

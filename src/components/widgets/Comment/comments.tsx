@@ -5,7 +5,7 @@ import type ReactMarkdown from 'react-markdown'
 import { message } from 'react-message-popup'
 import { socketClient } from 'socket'
 
-import type { CommentModel } from '@mx-space/api-client'
+import type { CommentModel } from 'api-client'
 
 import { Markdown } from '~/components/universal/Markdown'
 import { BottomUpTransitionView } from '~/components/universal/Transition/bottom-up'

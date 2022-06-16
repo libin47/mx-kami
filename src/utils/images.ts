@@ -1,7 +1,5 @@
 import shuffle from 'lodash-es/shuffle'
-
-import type { Image } from '@mx-space/api-client'
-
+import type { Image } from 'api-client'
 export const imagesRecord2Map = (images: Image[]) => {
   const map = new Map<string, Image>()
   images.forEach((image) => {

@@ -68,7 +68,7 @@ const Social = NoSSR(() => {
                   href={item.url}
                   target="_blank"
                   style={
-                    item.color ? { backgroundColor: item.color } : undefined
+                    item.color ? { color: item.color } : undefined
                   }
                 >
                   <FontIcon icon={item.icon} />

@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react'
 import Linkify from 'react-linkify'
 import { apiClient } from 'utils'
 
-import type { NoteModel, Pager } from '@mx-space/api-client'
-import type { TopicModel } from '@mx-space/api-client/types/models/topic'
+import type { NoteModel, Pager } from 'api-client'
+import type { TopicModel } from '~/api-client/models/topic'
 
 import { Divider, DividerVertical } from '~/components/universal/Divider'
 import {

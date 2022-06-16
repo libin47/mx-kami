@@ -11,7 +11,33 @@
   }
 }
 
+.ant-image-preview-img{
+  display: inline-block;
+}
+
 .ease-linear {
   animation-timing-function: steps(60) !important;
   transition-timing-function: steps(60) !important;
 }
+
+@font-face {
+  font-family: ShouZhang;
+  src: url(
+    '../font/FZSJ-WODAJDNKJ.TTF'
+  );
+}
+
+@font-face {
+  font-family: PinYin;
+  src: url(
+    '../font/FZSJ-CHULANWFXZ.TTF'
+  );
+}
+
+@font-face {
+  font-family: ShouZhangBold;
+  src: url(
+    '../font/FZZJ-XHLTJW.TTF'
+  );
+}
+    /* '../../../../extra/FZ/FZSJ-WODAJDNKJ.TTF' */

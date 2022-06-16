@@ -6,7 +6,7 @@ import { Fragment, memo, useEffect, useState } from 'react'
 import CountUp from 'react-countup'
 import { usePrevious } from 'react-use'
 
-import type { TimelineData } from '@mx-space/api-client'
+import type { TimelineData } from 'api-client'
 
 import { SolidBookmark } from '~/components/universal/Icons'
 import { NumberTransition } from '~/components/universal/NumberRecorder'

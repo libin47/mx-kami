@@ -1,7 +1,7 @@
 import { action, computed, makeObservable, observable } from 'mobx'
 import { apiClient } from 'utils/client'
 
-import type { CommentModel } from '@mx-space/api-client'
+import type { CommentModel } from 'api-client'
 
 import { Store } from '../helper/base'
 
@@ -42,6 +42,7 @@ export class CommentStore extends Store<
       page,
       size,
     })
+    console.log(data)
 
     this.currentRefId = refId
     this.comments = [...data.data]

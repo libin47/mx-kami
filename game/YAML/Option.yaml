@@ -1,0 +1,32 @@
+option:
+  name: 显示的按钮标题
+  remark?: 显示的备注信息
+
+  eventGet?:
+    - eventid: 事件id
+      eventtype: 当前值**目标值时触发,例如 Bigger/Smaller/Equal
+      eventvalue: 目标值
+  itemGet?:
+    - itemid: 需要的物品id
+      nummin: 需要的物品最低数量 包含
+      nummax: 需要的物品最大数量 包含
+
+  eventSet?:
+    - eventid: 事件id
+      eventvalue: 将事件value设置为
+  itemSet?:
+    - itemid: 物品id
+      itemnum: 变化数量 +-
+
+
+giveApple: 
+  name: 给予苹果*5
+  itemGet:
+    - itemid: apple
+      nummin: 5
+  eventSet:
+    - eventid: feedTheGirl
+      eventvalue: 1
+  itemSet:
+    - itemid: apple
+      itemnum: -5

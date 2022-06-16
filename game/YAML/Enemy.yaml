@@ -1,0 +1,85 @@
+Enemy:
+  name: 名称
+  desc: 描述
+  hp: 血量
+  tp: 体力,
+  mp: 魔法,
+  speed: 速度,
+  hp_?: 当前血量
+  mp_?: 当前魔法,
+  speed_?: 当前速度,
+  weaponIds: 
+    - 武器的id[]
+
+bankBiTiChong: 
+  name: Bank的鼻涕虫
+  desc: 即便是堕落勇者的鼻涕虫，也拥有超凡的力量
+  hp: 100
+  tp: 100
+  mp: 100
+  speed: 5
+  weaponIds: 
+    - masterBody
+maoTouYing: 
+  name: 魔法猫头鹰
+  desc: 来自传说中的魔法学院的猫头鹰，仿佛具有强大的魔力，还是不要招惹的好
+  hp: 300
+  tp: 100
+  mp: 666
+  speed: 10
+  weaponIds: 
+    - maoTouYingZhua
+shiLaiMuBlue: 
+  name: 蓝色史莱姆
+  desc: 在Rpg游戏里面出镜率超高的新手怪经典配置史莱姆-这是蓝色的
+  hp: 100
+  tp: 100
+  mp: 0
+  speed: 1
+  weaponIds: 
+    - masterBody
+shiLaiMuRed: 
+  name: 红色史莱姆
+  desc: 在Rpg游戏里面出镜率超高的新手怪经典配置史莱姆-这是红色的
+  hp: 100
+  tp: 100
+  mp: 0
+  speed: 1
+  weaponIds: 
+    - masterBody
+shiLaiMuKing:
+  name: 史莱姆王
+  desc: 史莱姆的母体——浑身散发着金色、亦或是危险的光芒
+  hp: 500
+  tp: 500
+  mp: 300
+  speed: 2
+  weaponIds: 
+    - masterBody
+bank: 
+  name: Bank
+  desc: 半哥甩着鼻涕如同战神一般
+  hp: 99
+  tp: 100
+  mp: 100
+  speed: 3
+  weaponIds: 
+    - wood
+zuoluo: 
+  name: 佐罗
+  desc: 佐罗戴上了头巾
+  hp: 999
+  tp: 300
+  mp: 999
+  speed: 30
+  weaponIds: 
+    - guiQie
+boy: 
+  name: 小男孩
+  desc: 愤怒的小男孩整个脸都变成了猪肝色
+  hp: 30
+  tp: 50
+  mp: 0
+  speed: 2
+  weaponIds: 
+    - wood
