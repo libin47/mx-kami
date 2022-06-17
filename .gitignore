@@ -2,7 +2,7 @@
 node_modules/
 
 # next.js build output
-.next
+.next/cache
 
 # typescript build output
 dist

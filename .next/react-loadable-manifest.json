@@ -1,0 +1,72 @@
+{
+  "../components/layouts/BasicLayout/index.tsx -> ../../universal/LampSwitch": {
+    "id": 14881,
+    "files": [
+      "static/css/393146bde474fc19.css",
+      "static/chunks/4881.57213c16cccc5647.js"
+    ]
+  },
+  "../components/layouts/BasicLayout/index.tsx -> ../../universal/Notice": {
+    "id": 11274,
+    "files": [
+      "static/css/ed57fc9003d0b917.css",
+      "static/chunks/1274.868e0b3b60868521.js"
+    ]
+  },
+  "../components/layouts/BasicLayout/index.tsx -> ./Footer": {
+    "id": 17883,
+    "files": [
+      "static/chunks/3108-97b8a476c6ef3cf2.js",
+      "static/chunks/298-27fffb18be55de02.js",
+      "static/css/cf44d3d9c4b1c35e.css",
+      "static/chunks/7883.f2a817e3ffaa6a45.js"
+    ]
+  },
+  "../components/layouts/BasicLayout/index.tsx -> ./Header": {
+    "id": 62536,
+    "files": [
+      "static/chunks/3108-97b8a476c6ef3cf2.js",
+      "static/chunks/9635-48e612740b3e54bf.js",
+      "static/chunks/298-27fffb18be55de02.js",
+      "static/chunks/9949-142996d65ecb5158.js",
+      "static/css/e20f0b7a4acc3d18.css",
+      "static/chunks/1498.9e271dcd2402ffb7.js"
+    ]
+  },
+  "../components/layouts/BasicLayout/index.tsx -> ~/components/widgets/Player": {
+    "id": 63737,
+    "files": [
+      "static/css/bcee68e53189eee6.css",
+      "static/chunks/3737.8044c83077ef168c.js"
+    ]
+  },
+  "../components/layouts/BasicLayout/index.tsx -> ~/components/widgets/Search": {
+    "id": 44742,
+    "files": [
+      "static/chunks/3108-97b8a476c6ef3cf2.js",
+      "static/chunks/298-27fffb18be55de02.js",
+      "static/chunks/4742-f4647fc997a4523b.js",
+      "static/css/1388045af5cfa317.css"
+    ]
+  },
+  "../components/universal/Markdown/index.tsx -> ~/components/universal/Toc": {
+    "id": 60759,
+    "files": [
+      "static/css/df0097e28aa4bbfd.css",
+      "static/chunks/759.2dcd1550a12c4cad.js"
+    ]
+  },
+  "../utils/console.ts -> devtools-detector": {
+    "id": 63183,
+    "files": [
+      "static/chunks/3183.8a89e2698b25e3c6.js"
+    ]
+  },
+  "_app.tsx -> ../socket/index": {
+    "id": 56524,
+    "files": [
+      "static/chunks/1774-a7bde33edbdddac4.js",
+      "static/chunks/6524.ebaa3fa7932683f8.js"
+    ]
+  }
+}
