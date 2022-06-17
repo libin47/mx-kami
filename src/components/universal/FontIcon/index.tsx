@@ -20,6 +20,7 @@ import {
   MdiTwitter,
   RiNeteaseCloudMusicLine,
   FaWeibo,
+  FaPhoto,
   FaBiliBili,
 } from '../Icons/menu-icon'
 
@@ -43,6 +44,7 @@ export const iconMap = {
   faTv: IcBaselineLiveTv,
   faWeibo: FaWeibo,
   faBili: FaBiliBili,
+  faPhoto: FaPhoto,
 }
 
 let hasAppended = false

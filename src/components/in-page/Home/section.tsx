@@ -15,6 +15,7 @@ import {
   FaSolidKissWinkHeart,
   MdiDrawPen,
   PhUsersDuotone,
+  FasPhoto,
 } from '~/components/universal/Icons'
 import { IcTwotoneSignpost } from '~/components/universal/Icons/menu-icon'
 import { BottomUpTransitionView } from '~/components/universal/Transition/bottom-up'
@@ -80,7 +81,7 @@ const _Sections: FC<AggregateTop> = ({ notes, posts, photos }) => {
 
     photoSection: {
       title: '最新相册',
-      icon: <MdiDrawPen />,
+      icon: <FasPhoto />,
       moreUrl: 'photos',
       content: photos.slice(0, 4).map((n) => {
         return {
