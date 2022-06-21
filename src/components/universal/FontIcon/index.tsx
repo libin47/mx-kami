@@ -22,6 +22,7 @@ import {
   FaWeibo,
   FaPhoto,
   FaBiliBili,
+  FaSteam,
 } from '../Icons/menu-icon'
 
 export const iconMap = {
@@ -45,6 +46,7 @@ export const iconMap = {
   faWeibo: FaWeibo,
   faBili: FaBiliBili,
   faPhoto: FaPhoto,
+  faSteam: FaSteam,
 }
 
 let hasAppended = false
