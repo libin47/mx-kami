@@ -86,7 +86,7 @@ const _Sections: FC<AggregateTop> = ({ notes, posts, photos }) => {
       content: photos.slice(0, 4).map((n) => {
         return {
           title: n.title,
-          background: 'https://image.wind-watcher.cn/'+n.photos.pop(),
+          background: 'http://image.wind-watcher.cn/'+n.photos.pop(),
           id: n.id,
           ...buildRoute('Photo', n),
         }

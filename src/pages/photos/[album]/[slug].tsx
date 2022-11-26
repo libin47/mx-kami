@@ -70,7 +70,7 @@ const AlbumView: React.FC<{ id: string }> = observer((props) => {
               {data.photos.map((photo, i) => {
                 return (
                   <BottomUpTransitionView key={photo} timeout={{ enter: 250 * i } }>
-                    <Image  style={{"objectFit": "contain", "padding":"0.5rem"}} width="100%" src={'https://image.wind-watcher.cn/'+photo} />
+                    <Image  style={{"objectFit": "contain", "padding":"0.5rem"}} width="100%" src={'http://image.wind-watcher.cn/'+photo} />
                  </BottomUpTransitionView>
                 )
               })}

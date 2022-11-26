@@ -43,11 +43,11 @@ export const AlbumDeBlock: FC<AlbumDeBlockProps> = observer((props) => {
     <div className={styles.main}>
       <div className={styles.album}  onClick={goToPhoto}>
         <div className={styles.top}> 
-          <img style={phdata&&(phdata.photos.length<1)?{display:"none"}:{}} className={styles.image0} src={'https://image.wind-watcher.cn/'+phdata?.photos[0]+'?w=512'}></img>
-          <img style={phdata&&(phdata.photos.length<2)?{display:"none"}:{}} className={styles.image1} src={'https://image.wind-watcher.cn/'+phdata?.photos[1]+'?w=512'}></img>
-          <img style={phdata&&(phdata.photos.length<3)?{display:"none"}:{}} className={styles.image2} src={'https://image.wind-watcher.cn/'+phdata?.photos[2]+'?w=512'}></img>
-          <img style={phdata&&(phdata.photos.length<4)?{display:"none"}:{}} className={styles.image3} src={'https://image.wind-watcher.cn/'+phdata?.photos[3]+'?w=512'}></img>
-          <img style={phdata&&(phdata.photos.length<5)?{display:"none"}:{}} className={styles.image4} src={'https://image.wind-watcher.cn/'+phdata?.photos[4]+'?w=512'}></img>
+          <img style={phdata&&(phdata.photos.length<1)?{display:"none"}:{}} className={styles.image0} src={'http://image.wind-watcher.cn/'+phdata?.photos[0]+'?w=512'}></img>
+          <img style={phdata&&(phdata.photos.length<2)?{display:"none"}:{}} className={styles.image1} src={'http://image.wind-watcher.cn/'+phdata?.photos[1]+'?w=512'}></img>
+          <img style={phdata&&(phdata.photos.length<3)?{display:"none"}:{}} className={styles.image2} src={'http://image.wind-watcher.cn/'+phdata?.photos[2]+'?w=512'}></img>
+          <img style={phdata&&(phdata.photos.length<4)?{display:"none"}:{}} className={styles.image3} src={'http://image.wind-watcher.cn/'+phdata?.photos[3]+'?w=512'}></img>
+          <img style={phdata&&(phdata.photos.length<5)?{display:"none"}:{}} className={styles.image4} src={'http://image.wind-watcher.cn/'+phdata?.photos[4]+'?w=512'}></img>
         </div>
         <div className={styles.down}>{phdata?.title}({phdata?.photos.length})</div>
       </div>
