@@ -1,59 +1,59 @@
 {
   "../components/layouts/BasicLayout/index.tsx -> ../../universal/LampSwitch": {
-    "id": 14881,
+    "id": 54074,
     "files": [
       "static/css/393146bde474fc19.css",
-      "static/chunks/4881.57213c16cccc5647.js"
+      "static/chunks/4074.3f4dd0f20b4cd222.js"
     ]
   },
   "../components/layouts/BasicLayout/index.tsx -> ../../universal/Notice": {
-    "id": 11274,
+    "id": 98889,
     "files": [
       "static/css/ed57fc9003d0b917.css",
-      "static/chunks/1274.868e0b3b60868521.js"
+      "static/chunks/8889.e8ca1b35d9efd619.js"
     ]
   },
   "../components/layouts/BasicLayout/index.tsx -> ./Footer": {
-    "id": 17883,
+    "id": 54421,
     "files": [
-      "static/chunks/3108-97b8a476c6ef3cf2.js",
-      "static/chunks/298-27fffb18be55de02.js",
+      "static/chunks/5537-e2ff0dcac6a5213f.js",
+      "static/chunks/8337-d5fe5815eecb19e9.js",
       "static/css/cf44d3d9c4b1c35e.css",
-      "static/chunks/7883.f2a817e3ffaa6a45.js"
+      "static/chunks/4421.e2bdd26bc660d2ce.js"
     ]
   },
   "../components/layouts/BasicLayout/index.tsx -> ./Header": {
-    "id": 62536,
+    "id": 8181,
     "files": [
-      "static/chunks/3108-97b8a476c6ef3cf2.js",
-      "static/chunks/9635-48e612740b3e54bf.js",
-      "static/chunks/298-27fffb18be55de02.js",
-      "static/chunks/9949-33ef1cff96d44504.js",
+      "static/chunks/5537-e2ff0dcac6a5213f.js",
+      "static/chunks/4579-ae419a75f32ffc09.js",
+      "static/chunks/8337-d5fe5815eecb19e9.js",
+      "static/chunks/1880-bd757d6660dd3cb6.js",
       "static/css/e20f0b7a4acc3d18.css",
-      "static/chunks/1498.9e271dcd2402ffb7.js"
+      "static/chunks/9827.eae77513ccdc11a6.js"
     ]
   },
   "../components/layouts/BasicLayout/index.tsx -> ~/components/widgets/Player": {
-    "id": 63737,
+    "id": 31460,
     "files": [
       "static/css/bcee68e53189eee6.css",
-      "static/chunks/3737.8044c83077ef168c.js"
+      "static/chunks/1460.aaf4413a4fac3218.js"
     ]
   },
   "../components/layouts/BasicLayout/index.tsx -> ~/components/widgets/Search": {
-    "id": 44742,
+    "id": 54538,
     "files": [
-      "static/chunks/3108-97b8a476c6ef3cf2.js",
-      "static/chunks/298-27fffb18be55de02.js",
-      "static/chunks/4742-f4647fc997a4523b.js",
+      "static/chunks/5537-e2ff0dcac6a5213f.js",
+      "static/chunks/8337-d5fe5815eecb19e9.js",
+      "static/chunks/4538-ee413563c8ce0dce.js",
       "static/css/1388045af5cfa317.css"
     ]
   },
   "../components/universal/Markdown/index.tsx -> ~/components/universal/Toc": {
-    "id": 60759,
+    "id": 62962,
     "files": [
       "static/css/df0097e28aa4bbfd.css",
-      "static/chunks/759.2dcd1550a12c4cad.js"
+      "static/chunks/2962.7a59f1c9491c8582.js"
     ]
   },
   "../utils/console.ts -> devtools-detector": {
@@ -63,10 +63,10 @@
     ]
   },
   "_app.tsx -> ../socket/index": {
-    "id": 56524,
+    "id": 10272,
     "files": [
-      "static/chunks/1774-a7bde33edbdddac4.js",
-      "static/chunks/6524.ebaa3fa7932683f8.js"
+      "static/chunks/1774-ef7203b22324e347.js",
+      "static/chunks/272.0aef85236232bdaa.js"
     ]
   }
 }

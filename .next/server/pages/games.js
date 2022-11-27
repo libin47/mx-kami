@@ -4,7 +4,7 @@ exports.id = 8451;
 exports.ids = [8451];
 exports.modules = {
 
-/***/ 66825:
+/***/ 2099:
 /***/ ((module) => {
 
 // Exports
@@ -131,7 +131,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 7839:
+/***/ 575:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -140,7 +140,7 @@ module.exports = {
 /* harmony export */   "t0": () => (/* binding */ PeopleIcon),
 /* harmony export */   "yR": () => (/* binding */ MasterIcon)
 /* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20997);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 
 function MasterIcon(props) {
@@ -183,7 +183,7 @@ function BuildIcon(props) {
 
 /***/ }),
 
-/***/ 78602:
+/***/ 3548:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -192,18 +192,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20997);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(45944);
+/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5944);
 /* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(mobx_react_lite__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(16689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _games_module_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(66825);
+/* harmony import */ var _games_module_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(2099);
 /* harmony import */ var _games_module_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_games_module_css__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var utils_client__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9908);
-/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(68103);
+/* harmony import */ var utils_client__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6246);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8103);
 /* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(clsx__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var components_universal_Icons_games__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7839);
+/* harmony import */ var components_universal_Icons_games__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(575);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([utils_client__WEBPACK_IMPORTED_MODULE_3__]);
 utils_client__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
@@ -1579,7 +1579,7 @@ __webpack_async_result__();
 
 /***/ }),
 
-/***/ 52167:
+/***/ 2167:
 /***/ ((module) => {
 
 "use strict";
@@ -1587,7 +1587,7 @@ module.exports = require("axios");
 
 /***/ }),
 
-/***/ 33104:
+/***/ 3104:
 /***/ ((module) => {
 
 "use strict";
@@ -1595,7 +1595,7 @@ module.exports = require("camelcase-keys");
 
 /***/ }),
 
-/***/ 68103:
+/***/ 8103:
 /***/ ((module) => {
 
 "use strict";
@@ -1611,7 +1611,7 @@ module.exports = require("dayjs");
 
 /***/ }),
 
-/***/ 45944:
+/***/ 5944:
 /***/ ((module) => {
 
 "use strict";
@@ -1619,7 +1619,7 @@ module.exports = require("mobx-react-lite");
 
 /***/ }),
 
-/***/ 16689:
+/***/ 6689:
 /***/ ((module) => {
 
 "use strict";
@@ -1627,7 +1627,7 @@ module.exports = require("react");
 
 /***/ }),
 
-/***/ 15255:
+/***/ 5255:
 /***/ ((module) => {
 
 "use strict";
@@ -1635,7 +1635,7 @@ module.exports = require("react-message-popup");
 
 /***/ }),
 
-/***/ 20997:
+/***/ 997:
 /***/ ((module) => {
 
 "use strict";
@@ -1643,7 +1643,7 @@ module.exports = require("react/jsx-runtime");
 
 /***/ }),
 
-/***/ 69915:
+/***/ 9915:
 /***/ ((module) => {
 
 "use strict";
@@ -1658,7 +1658,7 @@ module.exports = import("js-cookie");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [9908], () => (__webpack_exec__(78602)));
+var __webpack_exports__ = __webpack_require__.X(0, [6246], () => (__webpack_exec__(3548)));
 module.exports = __webpack_exports__;
 
 })();

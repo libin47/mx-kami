@@ -5,35 +5,35 @@ exports.id = 6454;
 exports.ids = [6454];
 exports.modules = {
 
-/***/ 60886:
+/***/ 886:
 /***/ ((module) => {
 
 module.exports = require("@mx-space/extra");
 
 /***/ }),
 
-/***/ 52167:
+/***/ 2167:
 /***/ ((module) => {
 
 module.exports = require("axios");
 
 /***/ }),
 
-/***/ 33104:
+/***/ 3104:
 /***/ ((module) => {
 
 module.exports = require("camelcase-keys");
 
 /***/ }),
 
-/***/ 68103:
+/***/ 8103:
 /***/ ((module) => {
 
 module.exports = require("clsx");
 
 /***/ }),
 
-/***/ 71705:
+/***/ 1705:
 /***/ ((module) => {
 
 module.exports = require("css-spring");
@@ -47,91 +47,91 @@ module.exports = require("dayjs");
 
 /***/ }),
 
-/***/ 95468:
+/***/ 5468:
 /***/ ((module) => {
 
 module.exports = require("dayjs/locale/zh-cn");
 
 /***/ }),
 
-/***/ 84125:
+/***/ 4125:
 /***/ ((module) => {
 
 module.exports = require("dayjs/plugin/customParseFormat");
 
 /***/ }),
 
-/***/ 67424:
+/***/ 7424:
 /***/ ((module) => {
 
 module.exports = require("dayjs/plugin/localizedFormat");
 
 /***/ }),
 
-/***/ 43491:
+/***/ 3491:
 /***/ ((module) => {
 
 module.exports = require("devtools-detector");
 
 /***/ }),
 
-/***/ 36211:
+/***/ 6211:
 /***/ ((module) => {
 
 module.exports = require("mobx");
 
 /***/ }),
 
-/***/ 45944:
+/***/ 5944:
 /***/ ((module) => {
 
 module.exports = require("mobx-react-lite");
 
 /***/ }),
 
-/***/ 95832:
+/***/ 5832:
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/loadable.js");
 
 /***/ }),
 
-/***/ 30503:
+/***/ 503:
 /***/ ((module) => {
 
 module.exports = require("randomcolor");
 
 /***/ }),
 
-/***/ 16689:
+/***/ 6689:
 /***/ ((module) => {
 
 module.exports = require("react");
 
 /***/ }),
 
-/***/ 66405:
+/***/ 6405:
 /***/ ((module) => {
 
 module.exports = require("react-dom");
 
 /***/ }),
 
-/***/ 19785:
+/***/ 9785:
 /***/ ((module) => {
 
 module.exports = require("react-intersection-observer");
 
 /***/ }),
 
-/***/ 15255:
+/***/ 5255:
 /***/ ((module) => {
 
 module.exports = require("react-message-popup");
 
 /***/ }),
 
-/***/ 20997:
+/***/ 997:
 /***/ ((module) => {
 
 module.exports = require("react/jsx-runtime");
@@ -145,7 +145,7 @@ module.exports = require("remove-markdown");
 
 /***/ }),
 
-/***/ 69915:
+/***/ 9915:
 /***/ ((module) => {
 
 module.exports = import("js-cookie");;
@@ -159,21 +159,21 @@ module.exports = import("react-toastify");;
 
 /***/ }),
 
-/***/ 63477:
+/***/ 3477:
 /***/ ((module) => {
 
 module.exports = require("querystring");
 
 /***/ }),
 
-/***/ 57310:
+/***/ 7310:
 /***/ ((module) => {
 
 module.exports = require("url");
 
 /***/ }),
 
-/***/ 96199:
+/***/ 1962:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
@@ -181,13 +181,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ getBangumi)
 /* harmony export */ });
-/* harmony import */ var _mx_space_extra__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(60886);
+/* harmony import */ var _mx_space_extra__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(886);
 /* harmony import */ var _mx_space_extra__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_mx_space_extra__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(63477);
+/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3477);
 /* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(querystring__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var url__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(57310);
+/* harmony import */ var url__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7310);
 /* harmony import */ var url__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(url__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(77314);
+/* harmony import */ var utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(2302);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([utils__WEBPACK_IMPORTED_MODULE_3__]);
 utils__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 /*
@@ -230,7 +230,7 @@ __webpack_async_result__();
 var __webpack_require__ = require("../../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [8494,4640,2752], () => (__webpack_exec__(96199)));
+var __webpack_exports__ = __webpack_require__.X(0, [4115,3603,381], () => (__webpack_exec__(1962)));
 module.exports = __webpack_exports__;
 
 })();
