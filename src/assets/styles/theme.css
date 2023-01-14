@@ -38,8 +38,12 @@
   --monospace-font: OperatorMonoSSmLig Nerd Font, JetBrains Mono, Operator Mono,
     Monaco, Consolas, 'Courier New', Courier, monospace;
   --mono-font: var(--monospace-font);
-  --note-font: 'ShouZhang', 'PinYin';
-  --note-font-bold: 'ShouZhangBold', 'PinYin';
+  --note-font: -apple-system, PingFang SC, Helvetica, noto sans sc,
+    hiragino sans gb, microsoft yahei, 'sans-serif';
+  --note-font-bold: -apple-system, PingFang SC, Helvetica, noto sans sc,
+    hiragino sans gb, microsoft yahei, 'sans-serif';
+/*   --note-font: 'ShouZhang', 'PinYin';
+  --note-font-bold: 'ShouZhangBold', 'PinYin'; */
 }
 
 html.dark {
