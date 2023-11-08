@@ -61,6 +61,7 @@ interface Footer {
   homePage: string
   motto: Motto
   icp: ICP
+  gwa: ICP
   background: Background
   navigation: Navigation[]
 }

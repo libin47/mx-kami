@@ -43,7 +43,7 @@ export const FooterContent: FC = observer(() => {
   const name = initialData.user.name
   const kamiConfig = useThemeConfig()
   const motto = kamiConfig.site.footer.motto
-
+  const gwa = kamiConfig.site.footer.gwa
   const icp = kamiConfig.site.footer.icp
   const navigation = kamiConfig.site.footer.navigation
 
@@ -88,6 +88,13 @@ export const FooterContent: FC = observer(() => {
               <div className="text-center inline-block">
                 <a href={icp.link} target={'_blank'} rel={'noreferrer'}>
                   {icp.label}
+                </a>
+              </div>
+            )}
+            {gwa.enable && !!gwa.label && !!gwa.link && (
+              <div className="text-center inline-block">
+                <a href={gwa.link} target={'_blank'} rel={'noreferrer'}>
+                  {gwa.label}
                 </a>
               </div>
             )}
